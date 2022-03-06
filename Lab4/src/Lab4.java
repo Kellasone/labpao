@@ -27,7 +27,7 @@ public class Lab4 {
 
         //As we can see, we cannot access the private field, out of the class. But look at the following black magic:
         System.out.println(theRealMcLarenCustomer.getUselessField());
-        //This exemplify that we cannot access the private field, but we can access the public methot that manipulate the private field, inside that class
+        //This exemplify that we cannot access the private field, but we can access the public method that manipulate the private field, inside that class
 
         System.out.println("\n\n\n");
 
@@ -54,9 +54,15 @@ public class Lab4 {
         //This shows us that a subclass can override a superclass method and change its behaviour
         ohHoney.whoAmI("beer");
         //This shows us that a subclass can overload a superclass method and change its behaviour based on number of parameters.
-        // The method has the same name but diferent parameters
+        // The method has the same name but different parameters
         //Lets try one more
         ohHoney.whoAmI(16);
+
+
+        //upcasting / downcasting
+
+        //clase abstracte
+        
 
     }
 }

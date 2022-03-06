@@ -1,7 +1,7 @@
 package classes_package;
 /*
 *
-* Base class. We will use this to extend further. We will use 2 public fields and 1 private field, to proove some concepts.
+* Base class. We will use this to extend further. We will use 2 public fields and 1 private field, to prove some concepts.
 * Generated getters, setters and 2 constructors, one with all parameters and one with no parameter
 *
 */
