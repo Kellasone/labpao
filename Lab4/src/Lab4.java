@@ -1,6 +1,4 @@
-import classes_package.DailyCustomer;
-import classes_package.McLarenCustomer;
-import classes_package.WeeklyCustomer;
+import classes_package.*;
 
 /*
 *
@@ -61,8 +59,33 @@ public class Lab4 {
 
         //upcasting / downcasting
 
-        //clase abstracte
-        
+        //Real Type: WeeklyCustomer; Declared Type: McLarenCustomer
+        McLarenCustomer upcasted = new WeeklyCustomer();
+        System.out.println(upcasted.getClass());
+
+        //The Declared type will tell us what methods we can access, but the real type will determines which implementation to be used
+        //For example: in both classes, we have the method whoAmI. Because the declared type, McLarenCustomer, has this method, we can use it, but because
+        //real type has its own implementation, we will receive the string from the real type
+
+        upcasted.whoAmI();
+
+        //Buuuuuuut, because the declared type has no method whoAmI with parameters, even though the real type has them, they cannot be called.
+        //Decomment the following line to see what is happening
+        //upcasted.whoAmI(3);
+
+
+        //Downcasting an object should be realized on an object that real type is already the child class .
+        // "You cannot directly cast superclass to subclass because that object was never a subclass"
+        WeeklyCustomer downcasted = (WeeklyCustomer) upcasted;
+        System.out.println(downcasted.getClass());
+
+        //abstract classes
+        //An abstract class cannot be instantiated
+//        AbstractClass ac = new AbstractClass();
+
+        //Abstract methods from the abstract class MUST be implemented by the subclass.
+        AbstractClassImpl aci = new AbstractClassImpl();
+        aci.method();
 
     }
 }
