@@ -1,3 +1,5 @@
+package prep;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -7,9 +9,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
-        File myObj = new File("Lab7/src/file.txt");
+        File myObj = new File("Lab7/src/prep/file.txt");
         try {
-            Scanner myReader = new Scanner(myObj);
+            Scanner myReader = new Scanner(new File("Lab7/src/prep/file.txt"));
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 System.out.println(data);
@@ -23,7 +25,7 @@ public class Main {
 
         try {
             FileWriter myWriter = new FileWriter(myObj);
-            myWriter.append("asd");
+            myWriter.write("dsa",0,2);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {

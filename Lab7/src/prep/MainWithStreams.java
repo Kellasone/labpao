@@ -1,8 +1,10 @@
+package prep;
+
 import java.io.*;
 
 public class MainWithStreams {
     public static void main(String[] args) {
-        File myObj = new File("Lab7/src/file.txt");
+        File myObj = new File("Lab7/src/prep/file.txt");
 
         FileInputStream fis = null;
         try {
@@ -13,7 +15,7 @@ public class MainWithStreams {
         DataInputStream dis = new DataInputStream(fis);
 
         try {
-            String fromFile = dis.readLine();
+            String fromFile = new String(dis.readAllBytes());
             System.out.println(fromFile);
         } catch (IOException e) {
             e.printStackTrace();
