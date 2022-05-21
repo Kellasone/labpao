@@ -45,7 +45,7 @@ An auditing service will need to be created that will log to a CSV file each tim
 
 ## Stage III 
 
-### Database persistence
+### jdbc.Database persistence
 
 Replace the services created in the second stage with others that use JDBC to store the data in a database of your choosing.
 
